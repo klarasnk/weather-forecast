@@ -5,7 +5,7 @@
       <div class="text-[20px]">Settings</div>
       <img src="@/assets/images/icon/close.png" alt="Icon" class="w-[25px] h-[25px] cursor-pointer" @click="show">
     </div>
-    <div class="w-full h-[150px] overflow-y-scroll" v-if="items.length>0">
+    <div class="w-full h-[150px] overflow-auto scrollbar-hide" v-if="items.length>0">
       <draggable v-model="items" v-if="items.length > 0 && visible">
         <template v-slot:item="{item}">
           <div>
@@ -31,7 +31,7 @@
                @keyup.enter="add"
                placeholder="Add Location">
         <button @click="add" class="flex items-center focus:outline-none">
-          <img class="w-[47px] hover:scale-[1.1]" src="@/assets/images/icon/logoutminor.svg" alt="">
+          <img class="w-[47px] hover:scale-[1.1]" src="@/assets/images/icon/logo.png" alt="">
         </button>
       </div>
     </div>
